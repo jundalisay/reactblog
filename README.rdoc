@@ -10,4 +10,8 @@ Timeline:
 
 * Feb 23-24 - Tried react.js, got it to work following a sample at https://github.com/applegrain/creact 
 
+Notes:
+
+* Used MySQL / ClearDB because I had problems with Postgre on Ubuntu
+
 <tt>rake doc:app</tt>.
