@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.5.1'
-gem 'sqlite3'
 
 gem 'bootstrap'
 gem 'sass-rails', '~> 5.0'
@@ -24,6 +23,7 @@ end
 
 group :development do
   gem 'spring'
+  gem 'sqlite3'
 
 #from creact sample app
   gem 'rspec-rails'
