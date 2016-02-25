@@ -3,6 +3,7 @@ var Main = React.createClass({
     return (
       <div>
         <Header title={'Blog'} />
+        <h3>Main.jsx</h3>
         <Body />
       </div>
     )
