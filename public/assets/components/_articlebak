@@ -1,0 +1,83 @@
+var Article = React.createClass({
+  getInitialState() {
+    return { editable: false }
+  },
+
+  onUpdate() {
+    if (this.state.editable) {
+      let article   = { id: this.props.article.id,
+                      title: this.refs.title.value,
+                      body: this.refs.body.value }
+
+      this.props.handleUpdate(article);
+    }
+
+    this.setState({ editable: !this.state.editable })
+  },
+
+  onUpdateLevel(action) {
+    if (this.canChangeLevel(action)) {
+      let level = this.getNewLevel(action)
+      let article = {id: this.props.article.id, level: level }
+
+      this.props.handleUpdate(article);
+    }
+  },
+
+  canChangeLevel(action) {
+    let levels  = ['bad', 'halfbad', 'fantastic'];
+    let index   = levels.indexOf(this.props.article.level);
+
+    return action === 'up' && index < 2 ||  action === 'down' && index > 0;
+  },
+
+  getNewLevel(action) {
+    let levels = ['bad', 'halfbad', 'fantastic'];
+    let level  = levels.indexOf(this.props.article.level);
+    let change = action === 'up' ? 1 : - 1;
+
+    return action ? levels[level + change] : this.props.article.level;
+  },
+
+  render() {
+    var title = this.state.editable ? <input type='text'
+                                            ref='title'
+                                            defaultValue={this.props.article.title} />
+                                   : <h3>{this.props.article.title}</h3>
+
+    let body = this.state.editable ? <textarea type='text'
+                                                  ref='body'
+                                                  defaultValue={this.props.article.body}>
+                                        </textarea>
+                                      : <p>{this.props.article.body}</p>
+    return (
+      <div>
+        {title}
+
+        <div className='skill-level'>
+          <button type="button"
+                  className="btn btn-default btn-sm"
+                  onClick={this.onUpdateLevel.bind(this, 'down')}>
+            <span className="glyphicon glyphicon-triangle-bottom"></span>
+          </button>
+
+            <p><strong>Level:</strong> {this.props.article.level}</p>
+
+          <button type="button"
+                  className="btn btn-default btn-sm"
+                  onClick={this.onUpdateLevel.bind(this, 'up')}>
+            <span className="glyphicon glyphicon-triangle-top"></span>
+          </button>
+        </div>
+
+        {body}
+
+        <button onClick={this.props.handleDelete}>
+          Delete
+        </button>
+
+        <button onClick={this.onUpdate}>{this.state.editable ? 'Submit' : 'Edit' }</button>
+      </div>
+    )
+  }
+});
