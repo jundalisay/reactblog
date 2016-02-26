@@ -36,7 +36,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    acts_as_commentable (4.0.2)
     acts_as_taggable_on (3.0.0.rc2)
       rails (>= 3, < 5)
     addressable (2.4.0)
@@ -191,7 +190,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  acts_as_commentable
   acts_as_taggable_on
   bootstrap-sass (~> 3.3.5)
   capybara

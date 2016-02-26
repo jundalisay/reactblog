@@ -14,7 +14,7 @@ gem 'redcarpet'
 gem 'react-rails'
 gem 'acts_as_taggable_on'
 gem 'impressionist'
-gem 'acts_as_commentable'
+# gem 'acts_as_commentable'
 
 # gem 'sunspot_rails'
 # gem 'swiftype'

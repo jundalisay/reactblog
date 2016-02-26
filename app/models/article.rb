@@ -1,7 +1,7 @@
 class Article < ActiveRecord::Base
 	enum level: [:bad, :halfbad, :fantastic]
 	is_impressionable
-	acts_as_commentable
+	# acts_as_commentable
 
 	# def self.search(search)
 	# 	if search 

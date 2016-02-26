@@ -27,9 +27,9 @@ class ArticlesController < ApplicationController
     impressionist(@article)
   end
 
-  def commenting
-    impressionist(@article)
-  end
+  # def commenting
+  #   impressionist(@article)
+  # end
 
   # def search
   #   @articles = Article.all
