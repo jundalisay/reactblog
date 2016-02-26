@@ -2,13 +2,22 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @article.title %>
+  <%= markdown(@article.title) %>
 </p>
 
 <p>
   <strong>Body:</strong>
-  <%= @article.body %>
+  <%= markdown(@article.body) %>
 </p>
+Number of views: <%= @article.impressionist_count %>
+<br>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<%= form_tag "/articles/commenting" do %>
+    <%= hidden_field_tag "id", @article.id %>
+    <%= text_area_tag "comment[comment]" %>
+    <%= submit_tag "Post Comment" %>
+<% end %>
+
+<br>
+<%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-info' %> |
+<%= link_to 'Back', articles_path, class: 'btn btn-info' %>

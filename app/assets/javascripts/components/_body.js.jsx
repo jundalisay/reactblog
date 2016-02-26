@@ -51,6 +51,7 @@ var Body = React.createClass({
   render() {
     return (
       <div>
+      Post Title
         <NewArticle handleSubmit={this.handleSubmit} />
         <AllArticles articles={this.state.articles}
                    handleDelete={this.handleDelete}

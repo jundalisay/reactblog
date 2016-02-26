@@ -20,7 +20,7 @@ var NewArticle = React.createClass({
       <div>
         <input ref='title' placeholder='Enter Title' />
         <input ref='body' placeholder='Body' />
-        <button onClick={this.handleClick}>Submit</button>
+        <button onClick={this.handleClick} className="btn btn-success btn-sm">Submit</button>
       </div>
     )
   }

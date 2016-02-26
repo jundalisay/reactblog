@@ -1,33 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container">
-	<h1>Juan's Blog</h1>
-	<h3>My first Rails App for CoderSchool!</h3>
-	<br>
-	<%= link_to 'New Article', new_article_path, class: 'btn btn-info'%>
-	<br>
-	<div class="row">
+<br>
+<%= link_to 'New Article', new_article_path, class: 'btn btn-info'%>
+<br>
+<div class="row">
   <div class="col-sm-8">
     <% @articles.each do |article| %>
-
+    <br>
+    <br>
       <div class="card">
         <div class="card-block">
           <h4 class="card-title">
             <%= link_to "#{article.title}", article %>
           </h4>
           <p class="card-text">
-            <%= article.body %>
+            <%= markdown(article.body) %>
           </p>
         </div>
+        Number of views: <%= article.impressionist_count %>
         <div class="card-footer">
           <%= link_to "Edit", edit_article_path(article), class: 'btn btn-info' %>
           <%= link_to 'Delete', article, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-warning' %>
         </div>
     <% end %>
   </div>
-</div>
-
-	<br>
-
-
 </div>

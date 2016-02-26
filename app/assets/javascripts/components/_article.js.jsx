@@ -27,16 +27,19 @@ var Article = React.createClass({
                                         </textarea>
                                       : <p>{this.props.article.body}</p>
     return (
-      <div class="panel panel-heading">
-        {title}
+      <div class="panel panel-default">
+        <div class="panel panel-heading">
+          {title}
+        </div>
+        <div class="panel-body">
+          {body}
+        </div>
 
-        {body}
+          <button onClick={this.props.handleDelete} className="btn btn-danger btn-sm">
+            Delete
+          </button>
 
-        <button onClick={this.props.handleDelete} className="btn btn-default btn-sm">
-          Delete
-        </button>
-
-        <button onClick={this.onUpdate} className="btn btn-default btn-sm">{this.state.editable ? 'Submit' : 'Edit' }</button>
+          <button onClick={this.onUpdate} className="btn btn-warning btn-sm">{this.state.editable ? 'Submit' : 'Edit' }</button>
       </div>
     )
   }

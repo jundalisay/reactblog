@@ -1,12 +1,32 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  impressionist :actions=>[:show, :index]
 
   def index
-    @articles = Article.all
+    @search = Article.search do
+      fulltext params[:search]
+    end
+    @articles = @search.results
+    # @articles = Article.all
     # @markdown = Redcarpet::Markdown.new(RedCarpet::Render::HTML)
   end
 
   def show
+    impressionist(@article)
+  end
+
+  def commenting
+    impressionist(@article)
+  end
+
+  def search
+    @articles = Article.all
+    if params[:search]
+      @articles = Article.find(:all, :conditions => ['name LIKE?', "%#{params[:search]}%"])
+    else
+      @articles = Article.find(:all)
+    end    
+    erb :"result"
   end
 
   def new
@@ -56,6 +76,6 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-      params.require(:article).permit(:title, :body)
+      params.require(:article).permit(:title, :body, :tag_list)
     end
 end
