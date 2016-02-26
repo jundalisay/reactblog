@@ -12,10 +12,15 @@ gem 'populator'
 gem 'redcarpet'
 
 gem 'react-rails'
-gem 'sunspot_rails'
 gem 'acts_as_taggable_on'
 gem 'impressionist'
 gem 'acts_as_commentable'
+
+# gem 'sunspot_rails'
+# gem 'swiftype'
+# gem 'foreman'
+# gem 'delayed_job_active_record'
+
 
 
 group :development, :test do
@@ -26,7 +31,7 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
 
-  gem 'sunspot_solr'
+  # gem 'sunspot_solr'
 end
 
 group :production do

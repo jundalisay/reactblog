@@ -3,10 +3,22 @@ class ArticlesController < ApplicationController
   impressionist :actions=>[:show, :index]
 
   def index
-    @search = Article.search do
-      fulltext params[:search]
+    # @articles =  Article.search(params[:search])
+
+    if params[:search]
+      @articles = Article.where(
+       "lower(body) LIKE lower(?)",
+       "#{Regexp.escape(params[:search])}%"
+       )
+    else
+      @articles = Article.all
     end
-    @articles = @search.results
+
+    # @search = Article.search do
+    #   fulltext params[:search]
+    # end
+    # @articles = @search.results
+
     # @articles = Article.all
     # @markdown = Redcarpet::Markdown.new(RedCarpet::Render::HTML)
   end
@@ -19,15 +31,15 @@ class ArticlesController < ApplicationController
     impressionist(@article)
   end
 
-  def search
-    @articles = Article.all
-    if params[:search]
-      @articles = Article.find(:all, :conditions => ['name LIKE?', "%#{params[:search]}%"])
-    else
-      @articles = Article.find(:all)
-    end    
-    erb :"result"
-  end
+  # def search
+  #   @articles = Article.all
+  #   if params[:search]
+  #     @articles = Article.find(:all, :conditions => ['name LIKE?', "%#{params[:search]}%"])
+  #   else
+  #     @articles = Article.find(:all)
+  #   end    
+  #   erb :"result"
+  # end
 
   def new
     @article = Article.new

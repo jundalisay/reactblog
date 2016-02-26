@@ -3,9 +3,17 @@ class Article < ActiveRecord::Base
 	is_impressionable
 	acts_as_commentable
 
-	searchable do
-		text :title, :body		
-	end
+	# def self.search(search)
+	# 	if search 
+	# 		find(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"])
+ #    	else
+ #    		find(:all)
+ #    	end
+ #    end
+
+	# searchable do
+	# 	text :title, :body		
+	# end
 
 	# acts_as_taggable
 	# acts_as_taggable_on :body

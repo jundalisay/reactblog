@@ -5,6 +5,13 @@
 <br>
 <div class="row">
   <div class="col-sm-8">
+  
+  <% if (@articles.empty?) %>
+    <br>
+    <h2>Sorry, no articles found.</h2>
+    <% else %>
+  <% end %>
+
     <% @articles.each do |article| %>
     <br>
     <br>

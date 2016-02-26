@@ -1,22 +1,5 @@
 == CODERSCHOOL HOMEWORK
 
-Timeline:
-
-* Feb 21 - Finished basic CRUD blog
-
-* Feb 20 - Tried ember.js failed, couldn't get .hbs files to work
-
-* Feb 22 - Tried angular.js failed, couldn't get scopes to work
-
-* Feb 23-24 - Tried react.js, got it to work following a sample at https://github.com/applegrain/creact 
-    
-Notes:
-
-* Used MySQL / ClearDB because I had problems with Postgre on Ubuntu
-
-<tt>rake doc:app</tt>.
-
-
 # Pre-work - *React Blog*
 
 **React Blog** is a Ruby on Rails blog application.
@@ -26,6 +9,22 @@ Submitted by: **Juan Dalisay Jr.**
 Time spent: **X** hours spent in total
 
 URL: **http://coderschoolblog.herokuapp.com/**
+
+Timeline:
+
+* Feb 21 - Finished basic CRUD blog and deploy to heroku (2 hours)
+
+* Feb 20 - Tried ember.js failed, couldn't get .hbs files to work (3 hours)
+
+* Feb 22 - Tried angular.js failed, couldn't get scopes to work (3 hours)
+
+* Feb 23-24 - Tried react.js, got it to work following a sample at https://github.com/applegrain/creact (10 hours)
+
+* Feb 25 - added extra features like navbar, search via sunspot, post views via impressionist, markdown via redcarpet (4 hours) 
+
+Notes:
+
+* Used MySQL / ClearDB because I had problems with Postgre on Ubuntu
 
 ## User Stories
 
