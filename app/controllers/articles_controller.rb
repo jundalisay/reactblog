@@ -7,8 +7,8 @@ class ArticlesController < ApplicationController
 
     if params[:search]
       @articles = Article.where(
-       "lower(body) LIKE lower(?)",
-       "#{Regexp.escape(params[:search])}%"
+       "lower(title) LIKE lower(?)",
+       "%#{Regexp.escape(params[:search])}%"
        )
     else
       @articles = Article.all
