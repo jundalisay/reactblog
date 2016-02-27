@@ -6,7 +6,7 @@
 
 Submitted by: **Juan Dalisay Jr.**
 
-Time spent: **20-30** hours spent in total
+Time spent: **over 25** hours spent in total, mostly in figuring out JS
 
 Timeline:
 
@@ -15,9 +15,7 @@ Timeline:
 * Feb 22 - Learned/Tried Angular.js failed, couldn't get scopes to work (3 hours)
 * Feb 23-24 - Learned/Tried React.js, got it to work, following a sample at https://github.com/applegrain/creact (10 hours)
 * Feb 25-26 - added extra features like navbar, search via sunspot (fail on heroku), post views via impressionist, markdown via redcarpet (6 hours)
-
-Notes:
-* Used MySQL / ClearDB because I had problems with Postgre on Ubuntu
+* Feb 27 - added gifs, tried comments and tags but failed (2 hours)
 
 URL: **http://coderschoolblog.herokuapp.com/**
 
@@ -52,19 +50,18 @@ Here's a walkthrough of implemented user stories:
 
 > HINT: You can put a `walkthrough.gif` file in your project folder, add to git, and use the following syntax to embed it:  
 > `![Video Walkthrough](walkthrough.gif)` 
-> 
 
-Adding an Article (React)
-![React-Add](/react.gif)
+> Adding an Article (React)
+> `![React-Add](/react.gif)`
 
-Deleting an Article (React/Non-React)
-![NonReact-Add](/nonreact.gif)
+> Adding an Article (Non-React with Markdown)
+> `![NonReact-Add](/nonreact.gif)`
 
-Searching an Article
-![Search](/search.gif)
+> Searching an Article
+> `![Search](/search.gif)`
 
-Deleting an Article (React/Non-React)
-![Delete](/delete.gif)
+> Deleting an Article (React/Non-React)
+> `![Delete](/delete.gif)`
 
 GIF created with SilentCast[SilentCast](https://github.com/colinkeenan/silentcast).
 
@@ -74,7 +71,7 @@ Describe any challenges encountered while building the app.
 
 1. Difficulty with JS. Spent over 3 hours looking for the cause of a UI bug after deployment to Heroku which turned out to be caused by leftover ember files
 2. Some gems such as Sunspot need add-ons in Heroku which are not free
-
+3. Used MySQL / ClearDB because I had problems with Postgre on Ubuntu
 
 ## License
 
