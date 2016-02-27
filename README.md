@@ -54,9 +54,19 @@ Here's a walkthrough of implemented user stories:
 > `![Video Walkthrough](walkthrough.gif)` 
 > 
 
+Adding an Article (React)
+![React-Add](/react.gif)
+
+Deleting an Article (React/Non-React)
+![NonReact-Add](/nonreact.gif)
+
+Searching an Article
+![Search](/search.gif)
+
+Deleting an Article (React/Non-React)
 ![Delete](/delete.gif)
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+GIF created with SilentCast[SilentCast](https://github.com/colinkeenan/silentcast).
 
 ## Notes
 
