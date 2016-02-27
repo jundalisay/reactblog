@@ -49,19 +49,19 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 > HINT: You can put a `walkthrough.gif` file in your project folder, add to git, and use the following syntax to embed it:  
-> `![Video Walkthrough](walkthrough.gif)` 
+![Video Walkthrough](walkthrough.gif)
 
 > Adding an Article (React)
-> `![React-Add](/react.gif)`
+![React-Add](/react.gif)
 
 > Adding an Article (Non-React with Markdown)
-> `![NonReact-Add](/nonreact.gif)`
+![NonReact-Add](/nonreact.gif)
 
 > Searching an Article
-> `![Search](/search.gif)`
+![Search](/search.gif)
 
 > Deleting an Article (React/Non-React)
-> `![Delete](/delete.gif)`
+![Delete](/delete.gif)
 
 GIF created with SilentCast[SilentCast](https://github.com/colinkeenan/silentcast).
 
