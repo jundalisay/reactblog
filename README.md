@@ -10,8 +10,8 @@ Time spent: **over 25** hours spent in total, mostly in figuring out JS
 
 Timeline:
 
-* Feb 21 - Finished basic CRUD blog and deploy to heroku (2 hours)
-* Feb 20 - Learned/Tried Ember.js failed, couldn't get .hbs files to work (3 hours)
+* Feb 20 - Finished basic CRUD blog and deploy to heroku (2 hours)
+* Feb 21 - Learned/Tried Ember.js failed, couldn't get .hbs files to work (3 hours)
 * Feb 22 - Learned/Tried Angular.js failed, couldn't get scopes to work (3 hours)
 * Feb 23-24 - Learned/Tried React.js, got it to work, following a sample at https://github.com/applegrain/creact (10 hours)
 * Feb 25-26 - added extra features like navbar, search via sunspot (fail on heroku), post views via impressionist, markdown via redcarpet (6 hours)
@@ -35,7 +35,7 @@ The following **required** functionality is complete:
 The following **optional** features are implemented:
 * [X] There is a "navbar" that is responsive to window size similar to http://v4-alpha.getbootstrap.com/examples/navbar/.
 * [X] User can see how many views a post has. 
-* [ ] User can leave a comment on a post.
+* [X] User can leave a comment on a post.
 * [ ] User can add "tags" to a post, and filter posts by tag. 
 
 > HINT: if you are unsure how to implement the Search feature, you can Google how to implement a simple search form. For example, one of the sites you will find is [this](http://www.jorgecoca.com/buils-search-form-ruby-rails/)
