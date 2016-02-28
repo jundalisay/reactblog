@@ -25,6 +25,7 @@ class ArticlesController < ApplicationController
 
   def show
     impressionist(@article)
+    @comments = @article.comments.all
   end
 
   # def commenting

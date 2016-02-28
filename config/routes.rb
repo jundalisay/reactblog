@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :articles
+  resources :articles do
+  	resources :comments
+  end
   
   # get "/search"
 

@@ -12,6 +12,10 @@
 Number of views: <%= @article.impressionist_count %>
 <br>
 
+<h3>Comments</h3>
+<%= render @article.comments %>
+<%= button_to "Add a Comment", new_article_comment_path(@article), :method => :get %> 
+
 <br>
 <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-info' %> |
 <%= link_to 'Back', articles_path, class: 'btn btn-info' %>

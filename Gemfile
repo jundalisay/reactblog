@@ -10,18 +10,20 @@ gem 'faker'
 gem 'populator'
 
 gem 'redcarpet'
+gem 'simple_form'
 
 gem 'react-rails'
-gem 'acts_as_taggable_on'
 gem 'impressionist'
+
+# gem 'acts_as_taggable_on'
+# gem 'the_comments'
+# gem 'awesome_nested_set'
 # gem 'acts_as_commentable'
 
 # gem 'sunspot_rails'
 # gem 'swiftype'
 # gem 'foreman'
 # gem 'delayed_job_active_record'
-
-
 
 group :development, :test do
   gem 'sqlite3'
