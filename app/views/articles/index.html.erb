@@ -1,34 +1,45 @@
 <p id="notice"><%= notice %></p>
 
-<br>
-<%= link_to 'New Article', new_article_path, class: 'btn btn-info'%>
-<br>
 <div class="row">
-  <div class="col-sm-8">
-  
+  <div class="pull-left control-group">
+    <%= link_to 'New Article', new_article_path, class: 'btn btn-info'%>
+  </div>
+  <div class="pull-right control-group">
+    <%= paginate @articles %>
+  </div>
+</div>
+
+<div class="col-sm-12">
   <% if (@articles.empty?) %>
     <br>
     <h2>Sorry, no articles found.</h2>
     <% else %>
   <% end %>
-
+    
     <% @articles.each do |article| %>
-    <br>
-    <br>
-      <div class="card">
-        <div class="card-block">
-          <h4 class="card-title">
-            <%= link_to "#{article.title}", article %>
-          </h4>
-          <p class="card-text">
+
+    <div class="col-sm-6">
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="container">
+            <br>
+            <%= markdown(article.title) %>
+          </div>
+          <div class="panel-body">
             <%= markdown(article.body) %>
-          </p>
+          </div>
+
+          <div class="panel-footer">
+            Number of views: <%= article.impressionist_count %>
+            <div class="pull-right control-group">
+              <%= link_to "View", article_path(article), class: 'btn btn-xs btn-info' %>
+              <%= link_to "Edit", edit_article_path(article), class: 'btn btn-xs btn-info' %>
+              <%= link_to 'Delete', article, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-xs btn-warning' %>
+            </div>
+          </div>
         </div>
-        Number of views: <%= article.impressionist_count %>
-        <div class="card-footer">
-          <%= link_to "Edit", edit_article_path(article), class: 'btn btn-info' %>
-          <%= link_to 'Delete', article, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-warning' %>
-        </div>
-    <% end %>
-  </div>
+      </div> 
+    </div>
+  <% end %>
 </div>
+  

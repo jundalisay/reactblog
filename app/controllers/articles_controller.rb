@@ -11,7 +11,7 @@ class ArticlesController < ApplicationController
        "%#{Regexp.escape(params[:search])}%"
        )
     else
-      @articles = Article.all
+      @articles = Article.all.order("created_at DESC").page(params[:page]).per(5)
     end
 
     # @search = Article.search do

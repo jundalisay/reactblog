@@ -1,5 +1,9 @@
 class Article < ActiveRecord::Base
 	enum level: [:bad, :halfbad, :fantastic]
+
+	validates :title, presence: true
+	validates :body, presence: true
+
 	is_impressionable
 	has_many :comments # , as: :commentable # polymorphic: true
 

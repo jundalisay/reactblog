@@ -15,6 +15,8 @@ gem 'simple_form'
 gem 'react-rails'
 gem 'impressionist'
 
+gem 'kaminari'
+
 # gem 'acts_as_taggable_on'
 # gem 'the_comments'
 # gem 'awesome_nested_set'
