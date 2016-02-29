@@ -16,6 +16,7 @@ Timeline:
 * Feb 23-24 - Learned/Tried React.js, got it to work, following a sample at https://github.com/applegrain/creact (10 hours)
 * Feb 25-26 - added extra features like navbar, search via sunspot (fail on heroku), post views via impressionist, markdown via redcarpet (6 hours)
 * Feb 27 - added gifs, tried comments and tags but failed (2 hours)
+* Feb 29 - implemented suggestions (1 hour)
 
 URL: **http://coderschoolblog.herokuapp.com/**
 

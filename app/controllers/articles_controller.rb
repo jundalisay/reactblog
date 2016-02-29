@@ -10,6 +10,8 @@ class ArticlesController < ApplicationController
        "lower(title) LIKE lower(?)",
        "%#{Regexp.escape(params[:search])}%"
        )
+      @articles.class == Array
+      @articles = Kaminari.paginate_array(@articles).page(params[:page]).per(5) 
     else
       @articles = Article.all.order("created_at DESC").page(params[:page]).per(5)
     end
